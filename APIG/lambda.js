@@ -1,6 +1,13 @@
 let AWS = require('aws-sdk');
-exports.handler = function(event, context, callback) {
+exports.handler = function (event, context, callback) {
 
 
-	callback(null,'Successfully executed');
+	callback(null, {
+		"isBase64Encoded": 1,
+		"statusCode": 200,
+		"headers": {
+			"headerName": "headerValue"
+		},
+		"body": "..."
+	});
 }
